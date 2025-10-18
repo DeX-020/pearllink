@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearllink - Buy & Sell Businesses | Business Marketplace</title>
+    <meta name="description" content="Pearllink - The premier marketplace for buying and selling businesses and business ideas. Connect with entrepreneurs worldwide.">
+    <meta name="keywords" content="business marketplace, buy business, sell business, business opportunities, entrepreneurship">
+    <meta name="author" content="Pearllink">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Consolidated CSS -->
+    <link rel="stylesheet" href="pearllink.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pearllink - Buy & Sell Businesses">
+    <meta property="og:description" content="The premier marketplace for buying and selling businesses and business ideas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pearllink.com">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pearllink",
+        "description": "The premier marketplace for buying and selling businesses and business ideas",
+        "url": "https://pearllink.com",
+        "logo": "https://pearllink.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Pearllink - Go to homepage">
+                <i class="fas fa-gem" aria-hidden="true"></i>
+                <span>Pearllink</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="#browse" class="nav-link" role="menuitem">Browse Businesses</a></li>
+                <li role="none"><a href="#sell" class="nav-link" role="menuitem">Sell Your Business</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            
+            <div class="nav-auth">
+                <button class="btn-secondary" id="loginBtn" aria-label="Open login modal">Login</button>
+                <button class="btn-primary" id="signupBtn" aria-label="Open signup modal">Sign Up</button>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner" aria-labelledby="hero-title">
+            <div class="hero-background" aria-hidden="true">
+                <div class="hero-particles" aria-hidden="true"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title" class="hero-title">
+                            <span class="gradient-text">Discover</span> Your Next
+                            <span class="gradient-text">Business</span> Opportunity
+                        </h1>
+                        <p class="hero-description">
+                            Pearllink connects entrepreneurs with the perfect business opportunities. 
+                            Buy established businesses or sell your venture to the right buyer.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary btn-large" id="browseBusinesses" aria-describedby="hero-description">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                Browse Businesses
+                            </button>
+                            <button class="btn-secondary btn-large" id="sellBusiness" aria-describedby="hero-description">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                                Sell Your Business
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="hero-cards">
+                            <div class="business-card" role="img" aria-label="Restaurant Chain business example - $2.5M price, 15% ROI, located in NYC">
+                                <div class="card-header">
+                                    <i class="fas fa-store" aria-hidden="true"></i>
+                                    <span>Restaurant Chain</span>
+                                </div>
+                                <div class="card-price">$2.5M</div>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-chart-line" aria-hidden="true"></i> 15% ROI</span>
+                                    <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> NYC</span>
+                                </div>
+                            </div>
+                            <div class="business-card" role="img" aria-label="SaaS Startup business example - $1.8M price, 10K users, global reach">
+                                <div class="card-header">
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                    <span>SaaS Startup</span>
+                                </div>
+                                <div class="card-price">$1.8M</div>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users" aria-hidden="true"></i> 10K Users</span>
+                                    <span><i class="fas fa-globe" aria-hidden="true"></i> Global</span>
+                                </div>
+                            </div>
+                            <div class="business-card" role="img" aria-label="Manufacturing business example - $5.2M price, established company with logistics">
+                                <div class="card-header">
+                                    <i class="fas fa-industry" aria-hidden="true"></i>
+                                    <span>Manufacturing</span>
+                                </div>
+                                <div class="card-price">$5.2M</div>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-cogs" aria-hidden="true"></i> Established</span>
+                                    <span><i class="fas fa-truck" aria-hidden="true"></i> Logistics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="features-title" class="section-title">Why Choose Pearllink?</h2>
+                    <p class="section-description">
+                        The most trusted platform for business transactions with advanced features and security.
+                    </p>
+                </div>
+                
+                <div class="features-grid" role="list" aria-label="Key features of Pearllink">
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Transactions</h3>
+                        <p>Bank-level security with escrow protection for all transactions.</p>
+                    </div>
+                    
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <h3>Advanced Search</h3>
+                        <p>Find the perfect business with our AI-powered search and filtering.</p>
+                    </div>
+                    
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Dedicated business advisors to guide you through every step.</p>
+                    </div>
+                    
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Market Insights</h3>
+                        <p>Real-time market data and business valuation tools.</p>
+                    </div>
+                    
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Ready</h3>
+                        <p>Access your business opportunities anywhere, anytime.</p>
+                    </div>
+                    
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Global Network</h3>
+                        <p>Connect with buyers and sellers from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse Businesses Section -->
+        <section id="browse" class="browse-section" aria-labelledby="browse-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="browse-title" class="section-title">Featured Businesses</h2>
+                    <p class="section-description">
+                        Discover amazing business opportunities waiting for the right entrepreneur.
+                    </p>
+                    <div class="section-stats">
+                        <div class="stat-highlight">
+                            <span class="stat-number" id="totalBusinesses">0</span>
+                            <span class="stat-label">Active Listings</span>
+                        </div>
+                        <div class="stat-highlight">
+                            <span class="stat-number" id="avgPrice">$0</span>
+                            <span class="stat-label">Average Price</span>
+                        </div>
+                        <div class="stat-highlight">
+                            <span class="stat-number" id="totalIndustries">0</span>
+                            <span class="stat-label">Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-filters" role="search" aria-label="Search and filter businesses">
+                    <div class="search-bar">
+                        <label for="searchInput" class="sr-only">Search businesses</label>
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" 
+                               placeholder="Search businesses, industries, or locations..." 
+                               id="searchInput"
+                               aria-describedby="search-help"
+                               autocomplete="off">
+                        <div id="search-help" class="sr-only">Search for businesses by name, industry, or location</div>
+                    </div>
+                    
+                    <fieldset class="filters">
+                        <legend class="sr-only">Filter businesses</legend>
+                        <div class="filter-group">
+                            <label for="industryFilter">Industry</label>
+                            <select id="industryFilter" aria-label="Filter by industry">
+                                <option value="">All Industries</option>
+                                <option value="technology">Technology</option>
+                                <option value="retail">Retail</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="services">Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="priceFilter">Price Range</label>
+                            <select id="priceFilter" aria-label="Filter by price range">
+                                <option value="">Any Price</option>
+                                <option value="0-100000">Under $100K</option>
+                                <option value="100000-500000">$100K - $500K</option>
+                                <option value="500000-1000000">$500K - $1M</option>
+                                <option value="1000000+">Over $1M</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="locationFilter">Location</label>
+                            <select id="locationFilter" aria-label="Filter by location">
+                                <option value="">All Locations</option>
+                                <option value="us">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="australia">Australia</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <div class="search-results-info">
+                    <div class="results-counter">
+                        <span id="resultsCount">0</span> businesses found
+                    </div>
+                    <div class="sort-options">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect" aria-label="Sort businesses">
+                            <option value="featured">Featured First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="businesses-grid" 
+                     id="businessesGrid" 
+                     role="list" 
+                     aria-label="Business listings"
+                     aria-live="polite"
+                     aria-atomic="false">
+                    <!-- Business listings will be populated by JavaScript -->
+                </div>
+                
+                <div class="load-more">
+                    <button class="btn-secondary" 
+                            id="loadMoreBtn" 
+                            aria-label="Load more business listings">
+                        Load More Businesses
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Business Section -->
+        <section id="sell" class="sell-section" aria-labelledby="sell-title">
+            <div class="container">
+                <div class="sell-content">
+                    <div class="sell-text">
+                        <h2 id="sell-title">Ready to Sell Your Business?</h2>
+                        <p>Get the best value for your business with our expert valuation and marketing services.</p>
+                        <ul class="sell-benefits">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Free business valuation</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Professional listing creation</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Marketing to qualified buyers</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Negotiation support</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Secure transaction handling</li>
+                        </ul>
+                        <button class="btn-primary btn-large" id="startSelling">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            Start Selling Now
+                        </button>
+                    </div>
+                    <div class="sell-form">
+                        <form id="sellBusinessForm" aria-labelledby="sell-title">
+                            <h3>Quick Business Assessment</h3>
+                            <div class="form-progress">
+                                <div class="form-progress-bar" id="businessFormProgress"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessName">Business Name</label>
+                                <input type="text" id="businessName" required aria-describedby="businessName-help" placeholder="E.g. Star Cafes Pvt Ltd">
+                                <span class="form-icon"><i class="fas fa-briefcase"></i></span>
+                                <div id="businessName-help" class="sr-only">Enter your business name</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessIndustry">Industry</label>
+                                <select id="businessIndustry" required aria-describedby="businessIndustry-help">
+                                    <option value="">Select Industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="services">Services</option>
+                                </select>
+                                <div id="businessIndustry-help" class="sr-only">Select your business industry</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="annualRevenue">Annual Revenue</label>
+                                <select id="annualRevenue" required aria-describedby="annualRevenue-help">
+                                    <option value="">Select Revenue Range</option>
+                                    <option value="0-100000">Under $100K</option>
+                                    <option value="100000-500000">$100K - $500K</option>
+                                    <option value="500000-1000000">$500K - $1M</option>
+                                    <option value="1000000+">Over $1M</option>
+                                </select>
+                                <div id="annualRevenue-help" class="sr-only">Select your annual revenue range</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="yearsInBusiness">Years in Business</label>
+                                <input type="number" id="yearsInBusiness" min="1" required aria-describedby="yearsInBusiness-help" placeholder="Years active">
+                                <span class="form-icon"><i class="fas fa-calendar-alt"></i></span>
+                                <div id="yearsInBusiness-help" class="sr-only">Enter number of years in business</div>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-calculator" aria-hidden="true"></i>
+                                Get Free Valuation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 id="about-title">About Pearllink</h2>
+                        <p>Pearllink is revolutionizing the way businesses are bought and sold. We've created a platform that connects entrepreneurs with the perfect opportunities, making business transactions seamless, secure, and successful.</p>
+                        <p>Our mission is to empower entrepreneurs by providing them with the tools, resources, and network needed to find their next business venture or successfully exit their current one.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-number">10,000+</div>
+                                <div class="stat-label">Businesses Listed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">$2.5B+</div>
+                                <div class="stat-label">Total Value Transacted</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50,000+</div>
+                                <div class="stat-label">Active Users</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-cards">
+                            <div class="about-card">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                                <h4>Innovation</h4>
+                                <p>Cutting-edge technology for modern business transactions</p>
+                            </div>
+                            <div class="about-card">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                <h4>Passion</h4>
+                                <p>Dedicated to helping entrepreneurs achieve their dreams</p>
+                            </div>
+                            <div class="about-card">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <h4>Excellence</h4>
+                                <p>Committed to delivering the highest quality service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="contact-title" class="section-title">Get In Touch</h2>
+                    <p class="section-description">
+                        Have questions? We're here to help you succeed.
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:hello@pearllink.com">hello@pearllink.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Business Ave, Suite 100<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm" aria-labelledby="contact-title">
+                        <h3>Send us a Message</h3>
+                        <div class="form-progress">
+                            <div class="form-progress-bar" id="contactFormProgress"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required aria-describedby="firstName-help" placeholder="Enter first name">
+                                <span class="form-icon"><i class="fas fa-user"></i></span>
+                                <div id="firstName-help" class="sr-only">Enter your first name</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required aria-describedby="lastName-help" placeholder="Enter last name">
+                                <span class="form-icon"><i class="fas fa-user"></i></span>
+                                <div id="lastName-help" class="sr-only">Enter your last name</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required aria-describedby="email-help" placeholder="you@example.com">
+                            <span class="form-icon"><i class="fas fa-at"></i></span>
+                            <div id="email-help" class="sr-only">Enter your email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" required aria-describedby="subject-help">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="selling">Selling a Business</option>
+                                <option value="buying">Buying a Business</option>
+                                <option value="support">Technical Support</option>
+                            </select>
+                            <div id="subject-help" class="sr-only">Select the subject of your inquiry</div>
+                        </div>
+                        <div class="form-group textarea-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required aria-describedby="message-help" placeholder="Tell us how we can help you..."></textarea>
+                            <span class="form-icon"><i class="fas fa-comment"></i></span>
+                            <div id="message-help" class="sr-only">Enter your message</div>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gem" aria-hidden="true"></i>
+                        <span>Pearllink</span>
+                    </div>
+                    <p>The premier marketplace for buying and selling businesses and business ideas.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#browse">Browse Businesses</a></li>
+                        <li><a href="#sell">Sell Your Business</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Business Valuation</a></li>
+                        <li><a href="#">Due Diligence</a></li>
+                        <li><a href="#">Legal Support</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pearllink. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal" aria-hidden="true" aria-labelledby="login-title">
+        <div class="modal-content">
+            <span class="close" id="closeLogin" aria-label="Close login modal">&times;</span>
+            <h2 id="login-title">Login to Pearllink</h2>
+            <form id="loginForm" aria-labelledby="login-title">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" required aria-describedby="loginEmail-help" placeholder="Enter your email address">
+                    <div id="loginEmail-help" class="sr-only">Enter your email address</div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required aria-describedby="loginPassword-help" placeholder="Enter your password">
+                    <div id="loginPassword-help" class="sr-only">Enter your password</div>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                    Login
+                </button>
+            </form>
+            <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="signupModal" aria-hidden="true" aria-labelledby="signup-title">
+        <div class="modal-content">
+            <span class="close" id="closeSignup" aria-label="Close signup modal">&times;</span>
+            <h2 id="signup-title">Join Pearllink</h2>
+            <form id="signupForm" aria-labelledby="signup-title">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" required aria-describedby="signupFirstName-help" placeholder="Enter first name">
+                        <div id="signupFirstName-help" class="sr-only">Enter your first name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" required aria-describedby="signupLastName-help" placeholder="Enter last name">
+                        <div id="signupLastName-help" class="sr-only">Enter your last name</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" required aria-describedby="signupEmail-help" placeholder="Enter your email address">
+                    <div id="signupEmail-help" class="sr-only">Enter your email address</div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required aria-describedby="signupPassword-help" placeholder="Create a strong password">
+                    <div id="signupPassword-help" class="sr-only">Enter your password</div>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required aria-describedby="signupConfirmPassword-help" placeholder="Confirm your password">
+                    <div id="signupConfirmPassword-help" class="sr-only">Confirm your password</div>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-user-plus" aria-hidden="true"></i>
+                    Create Account
+                </button>
+            </form>
+            <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Consolidated JavaScript -->
+    <script src="pearllink.js" defer></script>
+    
+    <!-- Service Worker for caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
